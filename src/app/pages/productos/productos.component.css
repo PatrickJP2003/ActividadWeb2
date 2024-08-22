@@ -1,0 +1,80 @@
+/* Contenedor principal */
+.container-fluid {
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    padding: 20px; /* Espaciado alrededor del contenedor */
+}
+
+/* Tarjetas */
+.card {
+    width: 18rem; /* Ancho fijo de las tarjetas */
+    margin: 10px; /* Espacio entre tarjetas */
+    border: 1px solid #ddd; /* Borde ligero para las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    position: relative; /* Necesario para el posicionamiento absoluto de los elementos internos */
+    background-color: #fff; /* Fondo blanco para la tarjeta */
+    transition: transform 0.3s; /* Transición para el efecto hover */
+}
+
+/* Imagen de la tarjeta */
+.card-img-top {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    height: 180px; /* Altura fija para la imagen */
+    object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 15px; /* Espaciado alrededor del contenido */
+    position: relative; /* Necesario para que el contenido absoluto se posicione correctamente */
+}
+
+/* Contenido oculto por defecto */
+.card-description {
+    position: absolute; /* Posiciona el contenido en la parte inferior */
+    bottom: 0; /* Alinea al fondo del contenedor */
+    left: 0; /* Alinea a la izquierda del contenedor */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semi-transparente */
+    color: #fff; /* Texto blanco */
+    padding: 15px; /* Espaciado interno */
+    opacity: 0; /* Oculta el contenido por defecto */
+    transition: opacity 0.3s; /* Transición para el efecto de aparición */
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    flex-direction: column; /* Apila los elementos en columna */
+    align-items: center; /* Centra horizontalmente el contenido */
+    justify-content: center; /* Centra verticalmente el contenido */
+}
+
+/* Muestra la descripción al pasar el cursor */
+.card:hover .card-description {
+    opacity: 1; /* Muestra el contenido al pasar el cursor */
+}
+
+/* Título de la tarjeta */
+.card-title {
+    font-size: 1.5rem; /* Tamaño del texto del título */
+    font-weight: 700; /* Peso del texto del título */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+/* Texto de la tarjeta */
+.card-text {
+    font-size: 1rem; /* Tamaño del texto de la descripción */
+    margin-bottom: 15px; /* Espacio debajo del texto */
+}
+
+/* Botón de la tarjeta */
+.btn-primary {
+    font-size: 1.1rem; /* Tamaño del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border-radius: 5px; /* Bordes redondeados del botón */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones para el hover */
+}
+
+.btn-primary:hover {
+    background-color: #3FA2F6; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Escala ligeramente el botón en hover */
+}
